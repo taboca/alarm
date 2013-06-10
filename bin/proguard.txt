@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:61
+-keep class com.red_folder.phonegap.plugin.backgroundservice.BootReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:55
+-keep class com.taboca.alarm.MyService { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class com.taboca.alarm.TabocaAlarm { <init>(...); }
+

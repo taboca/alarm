@@ -1,0 +1,23 @@
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/gen/com/taboca/alarm/R.java \
+ : /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-hdpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-hdpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-ldpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-ldpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-mdpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-mdpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-xhdpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/drawable-xhdpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/layout/main.xml \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/values/strings.xml \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/res/xml/config.xml \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-hdpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-hdpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-ldpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-ldpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-mdpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-mdpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-xhdpi/ic_launcher.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/res/drawable-xhdpi/icon.png \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/AndroidManifest.xml \
