@@ -58,6 +58,9 @@
 
     <plugin name="BackgroundServicePlugin" value="com.red_folder.phonegap.plugin.backgroundservice.BackgroundServicePlugin"/>
 
+    <plugin name="WebIntent" value="com.borismus.webintent.WebIntent" />`
+
+
 </plugins>
 </cordova>
 

@@ -10,6 +10,9 @@ import android.util.Log;
 
 import android.content.Intent;
 import android.provider.AlarmClock;
+ 
+import java.util.Calendar;
+
 
 //marcio
 
@@ -51,8 +54,31 @@ public class MyService extends BackgroundService {
             */
 
 
-         Vibrator vibrator = (Vibrator) getSystemService(this.VIBRATOR_SERVICE);
-                    vibrator.vibrate(100000);
+                Calendar cal1 = Calendar.getInstance();
+
+                String[] splits = this.mHelloTo.split(";");
+                String date= splits[0];
+                String hourStr = splits[1];
+
+                String[] dates = date.split("/");
+                String day = dates[0];
+                String month = dates[1];
+                String year = dates[2]; 
+
+                String[] hours = hourStr.split(":");
+                String hour = hours[0];
+                String min = hours[1];
+              
+                cal1.set(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day), Integer.parseInt(hour), Integer.parseInt(min));
+
+
+                Calendar c = Calendar.getInstance();
+                if(c.getTime() == cal1.getTime()) { 
+
+                Vibrator vibrator = (Vibrator) getSystemService(this.VIBRATOR_SERVICE);
+                vibrator.vibrate(100000);
+                 
+                } 
 
                     //vibrator.cancel();
 
