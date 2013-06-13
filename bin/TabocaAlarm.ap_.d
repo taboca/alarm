@@ -36,6 +36,7 @@
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/spec \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/spec.html \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/taboca.wav \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/webintent.js \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/css/index.css \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/img/cordova.png \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/assets/www/img/logo.png \

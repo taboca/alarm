@@ -23,13 +23,22 @@
 		<script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
 		<script type="text/javascript" src="backgroundService-2.7.0.js"></script>
 		<script type="text/javascript" src="myService-2.7.0.js"></script>
+		<script type="text/javascript" src="webintents.js"></script>
 		
         <script type="text/javascript" >
         	var myService = cordova.require('cordova/plugin/myService');
         	
         	document.addEventListener('deviceready', function() {
 				getStatus();
-  			}, true);
+
+                // Intent
+                window.plugins.webintent.getExtra(WebIntent.EXTRA_TEXT, function (url) {
+                      alert(url);
+                      }, function() { }
+                      
+                      );
+
+  			});
 
  			function handleSuccess(data) {
  				updateView(data);
@@ -96,8 +105,8 @@
 			 */
  			function updateView(data) {
 
-                var snd = new Media("http://taboca.com.br/taboca-brew.mp3");
-                snd.play();
+                //var snd = new Media("http://taboca.com.br/taboca-brew.mp3");
+                //snd.play();
 
 				var serviceBtn = document.getElementById("toggleService");
 				var timerBtn = document.getElementById("toggleTimer");

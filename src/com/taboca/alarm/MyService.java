@@ -9,14 +9,13 @@ import org.json.JSONObject;
 import android.util.Log;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.provider.AlarmClock;
  
-import java.util.Calendar;
-
+//import java.util.Calendar;
 
 //marcio
-
-            import android.os.Vibrator;
+import android.os.Vibrator;
 
 import com.red_folder.phonegap.plugin.backgroundservice.BackgroundService;
 
@@ -51,9 +50,26 @@ public class MyService extends BackgroundService {
             i.putExtra(AlarmClock.EXTRA_MINUTES, 32); 
             this.startActivity(i); 
 
+
             */
 
+            /*
+// works
+            Intent i=new Intent(Intent.ACTION_SEND);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //i.putExtra(Intent.EXTRA_TEXT, "marcio");
+            i.setType("marcio/text");
+            i.putExtra(Intent.EXTRA_TEXT, "marcio");
+            this.startActivity(i);
+            */
 
+    Intent i = new Intent();
+    PackageManager manager = getPackageManager();
+    i = manager.getLaunchIntentForPackage("com.taboca.alarm");
+    i.addCategory(Intent.CATEGORY_LAUNCHER);
+    this.startActivity(i);
+
+            /*
                 Calendar cal1 = Calendar.getInstance();
 
                 String[] splits = this.mHelloTo.split(";");
@@ -74,14 +90,13 @@ public class MyService extends BackgroundService {
 
                 Calendar c = Calendar.getInstance();
                 if(c.getTime() == cal1.getTime()) { 
+                */
 
                 Vibrator vibrator = (Vibrator) getSystemService(this.VIBRATOR_SERVICE);
                 vibrator.vibrate(100000);
                  
-                } 
-
-                    //vibrator.cancel();
-
+                //} 
+                //vibrator.cancel();
 
 			Log.d(TAG, msg);
 		} catch (JSONException e) {

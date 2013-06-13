@@ -1,4 +1,5 @@
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/classes.dex : \
+/Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/classes/com/borismus/webintent/WebIntent.class \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/classes/com/taboca/alarm/BuildConfig.class \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/classes/com/taboca/alarm/MyService.class \
 /Users/marciogalli/Desktop/bluetooth/MarcioCordova-2.7.0/bin/classes/com/taboca/alarm/R$attr.class \
