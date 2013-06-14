@@ -39,60 +39,29 @@ public class MyService extends BackgroundService {
 			String now = df.format(new Date(System.currentTimeMillis())); 
 
 
-
-            /*
-            Intent intent = new Intent(Intent.ACTION_VOICE_COMMAND);    
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            this.startActivity(intent);
-            */
-
-            /*
-            Intent i = new Intent(AlarmClock.ACTION_SET_ALARM); 
-            i.putExtra(AlarmClock.EXTRA_MESSAGE, "New Alarm"); 
-            i.putExtra(AlarmClock.EXTRA_HOUR, 18); 
-            i.putExtra(AlarmClock.EXTRA_MINUTES, 32); 
-            this.startActivity(i); 
-
-
-            */
-
-            /*
-// works
-            Intent i=new Intent(Intent.ACTION_SEND);
-            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            //i.putExtra(Intent.EXTRA_TEXT, "marcio");
-            i.setType("marcio/text");
-            i.putExtra(Intent.EXTRA_TEXT, "marcio");
-            this.startActivity(i);
-            */
-
 			String msg = "Hello " + this.mHelloTo + " - its currently " + now; 
-           try { 
+            try { 
 
               URL yahoo = new URL("http://www.mgalli.com/t.txt");
               URLConnection yc = yahoo.openConnection();
               BufferedReader in = new BufferedReader( new InputStreamReader(yc.getInputStream(),"UTF-8"));
-              //BufferedReader in = new BufferedReader( new InputStreamReader(yc.getInputStream()));
               String inputLine;
 
-               while ((inputLine = in.readLine()) != null)  { 
+              while ((inputLine = in.readLine()) != null)  { 
 			     Log.d(TAG, "==="+inputLine+"===" );
                  msg+=inputLine.toString() ;
-               } 
-                    //System.out.println(inputLine);
-            in.close();
+              } 
+              in.close();
+			  result.put("Message", msg);
+            } catch (IOException ee) { 
+                Log.d(TAG, "-----------"+ ee);
+            } 
 
-			//msg = inputLine.replace("\n","");
-			result.put("Message", msg);
-             } catch (IOException ee) { 
-			    Log.d(TAG, "-----------"+ ee);
-             } 
-
-    Intent i = new Intent();
-    PackageManager manager = getPackageManager();
-    i = manager.getLaunchIntentForPackage("com.taboca.alarm");
-    i.addCategory(Intent.CATEGORY_LAUNCHER);
-    this.startActivity(i);
+            Intent i = new Intent();
+            PackageManager manager = getPackageManager();
+            i = manager.getLaunchIntentForPackage("com.taboca.alarm");
+            i.addCategory(Intent.CATEGORY_LAUNCHER);
+            this.startActivity(i);
 
             /*
                 Calendar cal1 = Calendar.getInstance();
