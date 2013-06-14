@@ -3,6 +3,7 @@ package com.taboca.alarm;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,9 +13,13 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.provider.AlarmClock;
  
+// For network
+import java.net.*;
+import java.io.*;
+
 //import java.util.Calendar;
 
-//marcio
+//marcio test
 import android.os.Vibrator;
 
 import com.red_folder.phonegap.plugin.backgroundservice.BackgroundService;
@@ -33,8 +38,6 @@ public class MyService extends BackgroundService {
 			SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss"); 
 			String now = df.format(new Date(System.currentTimeMillis())); 
 
-			String msg = "Hello " + this.mHelloTo + " - its currently " + now;
-			result.put("Message", msg);
 
 
             /*
@@ -62,6 +65,28 @@ public class MyService extends BackgroundService {
             i.putExtra(Intent.EXTRA_TEXT, "marcio");
             this.startActivity(i);
             */
+
+			String msg = "Hello " + this.mHelloTo + " - its currently " + now; 
+           try { 
+
+              URL yahoo = new URL("http://www.mgalli.com/t.txt");
+              URLConnection yc = yahoo.openConnection();
+              BufferedReader in = new BufferedReader( new InputStreamReader(yc.getInputStream(),"UTF-8"));
+              //BufferedReader in = new BufferedReader( new InputStreamReader(yc.getInputStream()));
+              String inputLine;
+
+               while ((inputLine = in.readLine()) != null)  { 
+			     Log.d(TAG, "==="+inputLine+"===" );
+                 msg+=inputLine.toString() ;
+               } 
+                    //System.out.println(inputLine);
+            in.close();
+
+			//msg = inputLine.replace("\n","");
+			result.put("Message", msg);
+             } catch (IOException ee) { 
+			    Log.d(TAG, "-----------"+ ee);
+             } 
 
     Intent i = new Intent();
     PackageManager manager = getPackageManager();
@@ -98,7 +123,7 @@ public class MyService extends BackgroundService {
                 //} 
                 //vibrator.cancel();
 
-			Log.d(TAG, msg);
+			//Log.d(TAG, msg);
 		} catch (JSONException e) {
 		}
 		
@@ -147,3 +172,4 @@ public class MyService extends BackgroundService {
 
 
 }
+
